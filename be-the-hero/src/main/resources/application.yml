@@ -1,0 +1,28 @@
+# http://localhost:8080/api/bethehero/swagger-ui/index.html
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api/bethehero
+  
+spring:
+  data:
+    jpa:
+      repositories:
+        enabled: true
+  datasource: 
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/be_the_hero_db?allowPublicKeyRetrieval=true&serverTimezone=UTC
+    password: admin
+    username: admin
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+#    hibernate:
+#      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true 
+    
+    
+    
